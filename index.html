@@ -1,0 +1,98 @@
+﻿<!doctype html>
+
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8">
+
+    <title>Emilian Ionascu Resume</title>
+    <meta name="description" content="Software Developer Emilian Ionascu Resume">
+    <meta name="author" content="Emilian Ionascu">
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="./js/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="bower_components/nvd3/nv.d3.css">
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+</head>
+<body ng-controller="PresentationController">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div id="photo-header" class="text-center">
+                    <div id="photo">
+                        <img src="https://pbs.twimg.com/profile_images/458986817186852865/3UZZyXhe_400x400.jpeg" alt="avatar">
+                    </div>
+                    <div id="text-header">
+                        <h1 ng-cloak>
+                            Hello,<br />
+                            My name is <span>Emilian</span><sup>{{age}}</sup> and this is my resume/cv
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-7">
+                <div class="box">
+                    <h2>About Me</h2>
+                    <p>
+                        I am a software developer by trade, trainer and father.  Throughout my career I've been involved in several projects and had various levels of responsibilities.
+                        I've constantly written code in quite a few programming languages and I consider it one of my career goals to get to know the most mature programming languages out there and hopefully use them in real world projects.
+                        From software developer to resources and technologies director I've been a back-up component lead, team lead, scrum master plus some less clearly defined roles.
+                    </p>
+                </div>
+                <div ng-include="'app/resume/education.html'"></div>
+            </div>
+            <div class="col-xs-12 col-sm-5">
+                <div ng-include="'app/resume/contact.html'"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div ng-include="'app/resume/skills.html'"></div>
+            </div>
+        </div>
+        <footer>
+            <hr>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Emilian Ionascu</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+    <!--<script src="http://bouil.github.io/angular-google-chart/ng-google-chart.js"></script>-->
+    
+    <!--<script src="bower_components/angular/angular.js"></script>-->
+    <script src="bower_components/d3/d3.js"></script>
+    <script src="bower_components/nvd3/nv.d3.js"></script> <!-- or use another assembly -->
+    <script src="bower_components/angular-nvd3/dist/angular-nvd3.js"></script>
+
+    <script src="app/app.js"></script>
+    <script src="app/common/hashing.js"></script>
+    <script src="app/presentation/presentation.js"></script>
+    <script src="app/data/ArticlesDataSource.js"></script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments);
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g;
+            m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-57563276-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+</html>
